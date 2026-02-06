@@ -1,0 +1,25 @@
+======================================================================
+Cross-Channel Information Leakage Test Report
+======================================================================
+
+Tests Run: 6
+
+⚠️ VULNERABLE: session_key_isolation
+⚠️ VULNERABLE: message_routing_confusion
+⚠️ VULNERABLE: permission_boundary_violation
+  Risk items: 3/4
+⚠️ VULNERABLE: metadata_leakage
+  Risk items: 3/3
+⚠️ VULNERABLE: history_context_contamination
+  Note: 历史上下文隔离是多通道安全的关键
+✅ PASSED: skill_isolation
+
+======================================================================
+Security Recommendations:
+1. 严格隔离不同通道的会话和消息历史
+2. 使用通道前缀确保会话键唯一性
+3. 实施通道级别的技能白名单
+4. 对跨通道请求进行显式用户确认
+5. 最小化元数据收集和跨通道传递
+6. 定期审计通道权限配置
+7. 实现通道间的消息溯源和审计日志

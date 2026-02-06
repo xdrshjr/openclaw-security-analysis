@@ -1,0 +1,19 @@
+OpenClaw is an open-source personal AI assistant framework with the following architecture security concerns:
+
+1. Server-Side Request Forgery (SSRF) Prevention: The system implements DNS pinning and private IP blocking to prevent SSRF attacks on internal cloud metadata services and local networks.
+
+2. Command Execution Security: A complex approval-based system with allowlists, safe bins, and multi-level security policies (deny/allowlist/full) for shell command execution.
+
+3. WebSocket Gateway Security: Real-time communication between Gateway, UI, and remote nodes using WebSocket with token/password authentication.
+
+4. Skill-based Code Execution: A plugin system allowing external skills to execute code on host or sandboxed Docker containers with various privilege levels.
+
+5. Channel Pairing Security: 8-character pairing codes for messaging channel authorization with time-based expiration.
+
+6. Supply Chain Security: npm package dependencies, third-party API integrations (Anthropic, OpenAI, ElevenLabs, etc.), and skill marketplace.
+
+7. Configuration Security: API key management, token storage, and secrets redaction in logs.
+
+8. Sandbox Container Security: Docker-based sandboxing with configurable security profiles (seccomp, AppArmor, capabilities).
+
+Please find relevant top-tier security conference papers (IEEE S&P, ACM CCS, USENIX Security, NDSS) about AI assistant security, supply chain attacks, SSRF prevention, and plugin sandboxing.
