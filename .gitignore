@@ -1,0 +1,143 @@
+# ============================================
+# OpenClaw 项目 .gitignore
+# 防止敏感信息和临时文件提交到版本控制
+# ============================================
+
+# ============================================
+# 环境变量和敏感配置文件
+# ============================================
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# 配置文件 (包含真实密钥)
+config.yaml
+config.yml
+config.json
+config.local.yaml
+config.local.yml
+config.local.json
+
+# 备份文件
+*.backup
+*.bak
+*.old
+*.save
+config.yaml.bak
+config.yml.bak
+
+# ============================================
+# 密钥和证书文件
+# ============================================
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# SSH 密钥
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+id_ecdsa
+id_ecdsa.pub
+id_ed25519
+id_ed25519.pub
+.ssh/
+
+# API 密钥文件
+*.apikey
+api_key*
+apikey*
+secret*
+*credential*
+
+# ============================================
+# 日志文件
+# ============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ============================================
+# 运行时数据
+# ============================================
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================
+# 依赖和构建产物
+# ============================================
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ============================================
+# IDE 和编辑器
+# ============================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ============================================
+# 测试和临时文件
+# ============================================
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ============================================
+# OpenClaw 特定文件
+# ============================================
+references/*
+!references/.gitkeep
+.agents/
+.agents.lock
+exec-approvals.json
+device-auth.json
+creds.json
+sessions/
+agents/
+
+# ============================================
+# 安全扫描报告 (可选)
+# ============================================
+# security-report*.md
+# *-audit*.md

@@ -1,0 +1,55 @@
+# OpenClaw 配置文件模板
+# ⚠️ 重要提示: 此文件是模板，请勿在此文件中填写真实密钥！
+# 请复制此文件为 config.yaml 并在 .env 文件中设置环境变量
+# 或者使用 config.yaml 并在其中引用环境变量: ${ENV_VAR_NAME}
+
+model:
+  name: "gemini-1.5-flash"
+  # 使用环境变量引用 API 密钥
+  # 在 .env 文件中设置: GEMINI_API_KEY=your_api_key_here
+  api_key: "${GEMINI_API_KEY}"
+  api_base: "https://generativelanguage.googleapis.com/v1beta"
+
+proxy:
+  enabled: false
+  # 可选: 通过环境变量配置代理
+  http: "${HTTP_PROXY:-http://127.0.0.1:7890}"
+  https: "${HTTPS_PROXY:-http://127.0.0.1:7890}"
+
+defaults:
+  min_papers_per_domain: 15
+  max_papers_per_domain: 20
+  output_dir: "./references"
+
+# ============================================
+# 安全配置示例
+# ============================================
+
+# gateway:
+#   auth:
+#     mode: "token"  # 或 "password"
+#     token: "${GATEWAY_AUTH_TOKEN}"
+#   
+#   remote:
+#     enabled: false
+#     token: "${REMOTE_GATEWAY_TOKEN}"
+#
+# channels:
+#   telegram:
+#     bot_token: "${TELEGRAM_BOT_TOKEN}"
+#     webhook_secret: "${TELEGRAM_WEBHOOK_SECRET}"
+#   
+#   discord:
+#     bot_token: "${DISCORD_BOT_TOKEN}"
+#   
+#   slack:
+#     bot_token: "${SLACK_BOT_TOKEN}"
+#     signing_secret: "${SLACK_SIGNING_SECRET}"
+#
+# tools:
+#   web:
+#     search:
+#       api_key: "${BRAVE_API_KEY}"
+#
+# talk:
+#   api_key: "${ELEVENLABS_API_KEY}"
