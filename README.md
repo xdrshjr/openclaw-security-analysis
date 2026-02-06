@@ -1,5 +1,9 @@
 # OpenClaw Security Analysis
 
+<p align="center">
+  <img src="assets/logo.png" alt="OpenClaw Security Analysis Logo" width="200">
+</p>
+
 [![Experimental](https://img.shields.io/badge/Status-Experimental-orange.svg)](https://github.com/xdrshjr/openclaw-security-analysis)
 [![Security Audit](https://img.shields.io/badge/Type-Security%20Audit-red.svg)](https://github.com/xdrshjr/openclaw-security-analysis)
 [![Multi-Agent](https://img.shields.io/badge/Approach-Multi--Agent-blue.svg)](https://github.com/xdrshjr/openclaw-security-analysis)
